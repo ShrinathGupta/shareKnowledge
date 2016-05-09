@@ -1,0 +1,52 @@
+<ion-view view-title="Upload your File">
+
+<div style="margin-top:50px">
+  <label class="item item-input">
+    <span class="input-label">Area</span>
+    <input type="text">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">City</span>
+    <input type="text">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">College</span>
+    <input type="text">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">Subject</span>
+    <input type="text">
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">Content</span>
+    <input ion-autocomplete type="text" readonly="readonly" class="ion-autocomplete" autocomplete="off"   ng-model="model"     item-value-key="name"
+           item-view-value-key="view"
+           items-method="getTestItems(query)"
+           items-method-value-key="items"
+           placeholder="Enter Tags"
+           items-clicked-method="itemsClicked(callback)"
+           items-removed-method="itemsRemoved(callback)"
+           max-selected-items="3"/>
+  </label>
+
+  <label class="item item-input">
+    <span class="input-label">Attachment</span>
+
+      <div class="button-bar"> <!--<button ng-click="getPhoto();"> <div class="ion-camera"></div>&nbsp;&nbsp;</button>-->
+        <button class="ion-folder"  ng-click="filesystem()"> &nbsp;&nbsp;</button>
+        <!-- <button  ng-click="viewPictures();">View loaded</button> </div>
+       <div ng-show="picData" class="item item-image">When pics loaded click to upload!<img id="myImage" class="item" ng-src="{{picData}}" ng-click="uploadPicture()" style="height:200px;"/></div>
+       <div class="home-sq" ng-show=photos><p><i class="icon ion-alert-circled" style="color:#F60"></i> Click to set photo like avatar, or lon click to delete!<p>-->
+       <!-- <div ng-repeat="photo in lastPhoto track by $index" ng-click="setPhoto($index, photo.name, profilo.user_id)" on-hold="delPhoto($index, photo.name)" style="background-image:url({{photo.file}});background-size:120% auto"> </div>-->
+        <img ng-src="{{lastPhoto}}" style="max-width: 100%">
+      </div>
+
+  </label>
+
+  <ion-option-button class="button-positive" ng-click="upload()" id="btnSubmit">Upload</ion-option-button>
+
+</div>
+  </ion-view>

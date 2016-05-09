@@ -1,0 +1,149 @@
+<ion-view view-title="Search">
+  <ion-tabs class="tabs-striped  tabs-background-positive tabs-light tabs-top">
+    <ion-tab title="Engineering">
+      <ion-nav-view name="a-tab">
+
+        <div style="margin-top: 118px"> State</div>
+        <div class="list">
+
+          <label class="item item-input item-select">
+            <div class="input-label">
+              &nbsp;
+            </div>
+            <select id="country1" ng-model="country" ng-options="country for country in countries"  >
+              <option value=''>Select</option>
+            </select>
+          </label>
+
+        </div>
+
+        <div> City</div>
+        <div class="list">
+
+          <label class="item item-input item-select">
+            <div class="input-label">
+              &nbsp;
+            </div>
+            <select id="city" ng-disabled="!cities" ng-model="city" ng-options="city.Name for city in cities"  >
+              <option value=''>Select</option>
+            </select>
+          </label>
+
+        </div>
+
+        <div> Content</div>
+        <div class="list">
+
+          <label class="item item-input item-select">
+            <div class="input-label">
+              &nbsp;
+            </div>
+            <select id="city" ng-disabled="!cities" ng-model="city" ng-options="city.Name for city in cities"  >
+              <option value=''>Select</option>
+            </select>
+          </label>
+
+        </div>
+
+        <!-- Search Criteria-->
+        <ion-option-button class="button-positive" ng-click="serch()" id="btnSubmit">Search</ion-option-button>
+
+      </ion-nav-view>
+    </ion-tab>
+
+
+    <ion-tab title="Medical" >
+      <ion-nav-view name="b-tab">
+
+        <div style="margin-top: 118px"> State</div>
+        <div class="list">
+
+          <label class="item item-input item-select">
+            <div class="input-label">
+              &nbsp;
+            </div>
+            <select id="country" ng-model="country" ng-options="country for country in countries"  >
+              <option value=''>Select</option>
+            </select>
+          </label>
+
+        </div>
+
+        <div> City</div>
+        <div class="list">
+
+          <label class="item item-input item-select">
+            <div class="input-label">
+              &nbsp;
+            </div>
+            <select id="city" ng-disabled="!cities" ng-model="city" ng-options="city.Name for city in cities"  >
+              <option value=''>Select</option>
+            </select>
+          </label>
+
+        </div>
+
+        <div> Content</div>
+        <div class="list">
+
+          <label class="item item-input item-select">
+            <div class="input-label">
+              &nbsp;
+            </div>
+            <select id="city" ng-disabled="!cities" ng-model="city" ng-options="city.Name for city in cities"  >
+              <option value=''>Select</option>
+            </select>
+          </label>
+
+        </div>
+
+        <!-- Search Criteria-->
+        <ion-option-button class="button-positive" ng-click="serch()" id="btnSubmit">Search</ion-option-button>
+      </ion-nav-view>
+    </ion-tab>
+
+
+    <ion-tab title="Competative" >
+      <ion-nav-view name="c-tab">
+
+
+
+        <div style="margin-top: 118px"> Area</div>
+        <div class="list">
+
+          <label class="item item-input item-select">
+            <div class="input-label">
+              &nbsp;
+            </div>
+            <select id="country" ng-model="country" ng-options="country for country in countries"  >
+              <option value=''>Select</option>
+            </select>
+          </label>
+
+        </div>
+
+        <div> Exam</div>
+        <div class="list">
+
+          <label class="item item-input item-select">
+            <div class="input-label">
+              &nbsp;
+            </div>
+            <select id="city" ng-disabled="!cities" ng-model="city" ng-options="city.Name for city in cities"  >
+              <option value=''>Select</option>
+            </select>
+          </label>
+
+        </div>
+
+        <!-- Search Criteria-->
+        <ion-option-button class="button-positive" ng-click="serch()" id="btnSubmit">Search</ion-option-button>
+
+
+
+      </ion-nav-view>
+    </ion-tab>
+    <!--<ion-tab title="D" ng-click="openMyModal()">
+    </ion-tab>-->
+  </ion-tabs>
+</ion-view>
